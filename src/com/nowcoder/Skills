@@ -1,0 +1,24 @@
+遍历map四种方式
+    1、for (Map.Entry<Integer, Integer> entry : map.entrySet()) {...}
+    2、for (Integer key : map.keySet()) {...}  只用key或value for (Integer value : map.values()) {...}
+    3、Iterator<Map.Entry<Integer, Integer>> entries = map.entrySet().iterator();
+      while (entries.hasNext()) {
+      Map.Entry<Integer, Integer> entry = entries.next();
+         ......
+      }
+    4、方法2的keySet()根据键来查值，较慢
+
+字符串自己处理字符用char []chars= str.toCharArray(),方法处理用String[] strs=str.split("");
+
+字符数组/StringBuffer/StringBuilder转为String ==> new String(传入待转)
+
+Arrays.asList(array)返回的ArrayList对象（属于Arrays内部类）需转为集合对象才可进一步操作new ArrayList(传入待转)
+
+比如int[]，double[]，char[]等基数据类型的数组，Arrays类之只是提供了默认的升序排列，没有提供相应的降序排列方法。
+要对基础类型的数组进行降序排序，需要将这些数组转化为对应的封装类数组（或List）Collections提供了排序参数Collection.sort(list,顺序（默认正序）)
+list.sort(顺序)
+
+Comparable & Comparator区别
+ 都是用来实现集合中的排序的，只是 Comparable 是在对象内部定义的方法实现的排序，实现需重写compareTO，Comparator 是在对象外部实现的排序（）更灵活，实现须重写compare，基本类包装类实现了Comparable。
+
+ 用new创建数组直接被初始化
